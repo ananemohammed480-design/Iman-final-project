@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMAN Bootcamp - Frontend Track</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">IMAN Bootcamp</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#projects">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 1. Home / Hero -->
+  <section id="hero" class="hero">
+    <h1>Master Frontend Development</h1>
+    <p>Build real-world web applications with HTML, CSS, and JavaScript at IMAN Bootcamp.</p>
+    <a href="#contact" class="btn">Apply Now</a>
+  </section>
+
+  <!-- 2. About the Frontend Track -->
+  <section id="about" class="section">
+    <h2>About the Frontend Track</h2>
+    <p>This track takes you from absolute fundamentals to building dynamic, interactive web projects using standard modern web tools.</p>
+  </section>
+
+  <!-- 3. What You'll Learn -->
+  <section id="curriculum" class="section bg-light">
+    <h2>What You'll Learn</h2>
+    <ul class="skills-list">
+      <li>HTML5 & Semantic Markup</li>
+      <li>CSS3 Layouts (Flexbox & Grid)</li>
+      <li>Responsive Web Design</li>
+      <li>JavaScript ES6+ Essentials</li>
+      <li>DOM Manipulation & Async Logic</li>
+    </ul>
+  </section>
+
+  <!-- 4. Why IMAN Bootcamp? -->
+  <section id="why" class="section">
+    <h2>Why IMAN Bootcamp?</h2>
+    <p>Hands-on mentorship, real-world project portfolios, and structured peer learning.</p>
+  </section>
+
+  <!-- 5. Student Projects (With Interactive Filtering) -->
+  <section id="projects" class="section bg-light">
+    <h2>Student Projects</h2>
+    
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+      <button class="filter-btn" data-filter="js">JavaScript</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card html-css">
+        <h3>Portfolio Website</h3>
+        <p>A clean multi-page personal layout.</p>
+        <span class="tag">HTML/CSS</span>
+      </div>
+      <div class="project-card js">
+        <h3>Interactive Quiz App</h3>
+        <p>A dynamic quiz application using DOM state management.</p>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="project-card js">
+        <h3>Task Tracker</h3>
+        <p>Local storage enabled task management list.</p>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Testimonials -->
+  <section class="section">
+    <h2>Student Testimonials</h2>
+    <div class="testimonial-card">
+      <p>"The structure and hands-on exercises allowed me to build confidence in JavaScript very quickly."</p>
+      <strong>- Sarah M.</strong>
+    </div>
+  </section>
+
+  <!-- 7. FAQ (With Accordion Feature) -->
+  <section id="faq" class="section bg-light">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <button class="faq-question">Who can join this track?</button>
+      <div class="faq-answer">
+        <p>Anyone interested in learning web development! Prior experience is helpful but not strictly required.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How long does the track last?</button>
+      <div class="faq-answer">
+        <p>The program runs for several intensive weeks covering theory and hands-on projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Contact / Registration (With Validation) -->
+  <section id="contact" class="section">
+    <h2>Contact / Registration</h2>
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+        <small class="error-msg" id="nameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" />
+        <small class="error-msg" id="emailError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+        <small class="error-msg" id="messageError"></small>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+      <div id="formSuccess" class="success-msg"></div>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
